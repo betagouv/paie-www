@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+
+		<title>Fiche de Paie Simplifiée</title>
+
+		<link rel="stylesheet" href="css/awesome.css" type="text/css"/>
+
+		<style type="text/css">
+			body {
+				font-family: Helvetica Neue;
+				font-weight: light;
+				max-width: 62em;
+				margin: auto;
+			}
+
+			section {
+				display: block;
+				clear: both;
+				margin-bottom: 3em;
+			}
+
+			h2 {
+				text-align: center;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			ul {
+				padding: 0;
+				line-height: 1.5;
+			}
+
+			.smallprint {
+				font-size: 80%;
+			}
+
+			#blocks article {
+				width: 15em;
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-size: contain;
+				text-align: center;
+			}
+
+			#blocks article img {
+				width: 10em;
+			}
+
+			.todo {
+				opacity: 0.6;
+				position: relative;
+			}
+
+			.todo:hover::after {
+				content: 'En phase de découverte';
+				color: white;
+				font-weight: bold;
+				padding-top: 40%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 60%;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+
+			h3 {
+				font-size: 100%;
+			}
+
+			#logo {
+				float: left;
+				height: 12em;
+				margin-right: 1em;
+			}
+
+			#join {
+				text-align: center;
+			}
+
+			#join a {
+				padding: .5em 1em;
+				font-size: 150%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section id="mission">
+			<img id="logo" src="img/logo_startup_etat.svg" alt=""/>
+
+			<h1>Fiche de Paie Simplifiée</h1>
+
+			<p>La mission Etalab a lancé, le 1ᵉ octobre 2014, en mode Startup d’État, le développement d’une ressource ouverte destinée à la fois la simplification administrative de la fiche de paie, au développement de présentations pédagogiques, et à tous usages qui pourront s’en emparer.</p>
+			<p>Nous livrons un moteur de fiche de paie évolutif, dont une démonstration a lieu toutes les deux semaines auprès du groupe de travail ouvert qui constitue son comité de pilotage ad­ hoc.</p>
+		</section>
+
+		<section id="join">
+			<a class="awesome yellow" href="mailto:paie@sgmap.fr?subject=Rejoindre l'OpenLab&body=Bonjour, je suis intéressé par votre produit et votre démarche et souhaite participer au prochain OpenLab. Bonne journée !">Participer à la définition du produit</a>
+			<p class="smallprint">Le prochain OpenLab aura lieu le <strong>mercredi 26 novembre de 10h à 12h</strong>.</p>
+		</section>
+
+		<section id="blocks">
+			<article id="source">
+				<a href="https://github.com/sgmap/paie-api">
+					<img src="img/code.svg" alt=""/>
+					<h3>Modifier le code source</h3>
+				</a>
+			</article>
+			<article id="api" class="alpha">
+				<a href="http://paie.sgmap.fr/api/doc/">
+					<img src="img/api.svg" alt=""/>
+					<h3>Tester l'API</h3>
+				</a>
+			</article>
+			<article id="fillon" class="todo">
+				<a href="#">
+					<img src="img/calculator.svg" alt=""/>
+					<h3>Calculer ma &laquo;&nbsp;réduction Fillon&nbsp;&raquo;</h3>
+				</a>
+			</article>
+			<article id="payslip" class="todo">
+				<a href="#">
+					<img src="img/payslip.svg" alt=""/>
+					<h3>Créer ma fiche de paie</h3>
+				</a>
+			</article>
+		</section>
+
+		<section>
+			<h2>Réduire la friction administrative pour tous les acteurs de la paie</h2>
+
+			<ul>
+				<li><strong>Salariés</strong> : un outil pédagogique pour obtenir une fiche de paie transparente, qui permet de comprendre les calculs de cotisations et les droits afférents, pour désamorcer la méfiance.</li>
+				<li><strong>Petites entreprises</strong> : un outil simple et gratuit pour éditer les fiches de paie, qui sécurise vis­-à-­vis de la conformité au droit, et facilite le passage à la DSN.</li>
+				<li><strong>Expert ­comptable</strong> : un outil efficace pour éditer et vérifier les fiches de paie, qui permet de diminuer la complexité de production d’une fiche de paie (congés, indemnités, conventions collectives, dispositifs fiscaux type Fillon…), pour restituer ces gains de productivité à l’entreprise par une diminution des tarifs ou une extension des services.</li>
+				<li><strong>Éditeurs de logiciels et prestataires de service</strong> : un outil facile à intégrer de calcul des cotisations, qui permet de compléter l’offre de guichet professionnel des opérateurs et de diminuer le coût de maintenance des logiciels de paie, pour investir dans la création de valeur plutôt que dans le suivi des évolutions règlementaires.</li>
+			</ul>
+		</section>
+	</body>
+</html>
