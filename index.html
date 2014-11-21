@@ -52,11 +52,10 @@
 			}
 
 			.todo {
-				opacity: 0.6;
 				position: relative;
 			}
 
-			.todo:hover::after {
+			.no-js.todo:hover::after, .todo.active::after {
 				content: 'En phase de découverte';
 				color: white;
 				font-weight: bold;
@@ -91,7 +90,7 @@
 		</style>
 	</head>
 
-	<body>
+	<body class="no-js">
 		<section id="mission">
 			<img id="logo" src="img/logo_startup_etat.svg" alt=""/>
 
@@ -144,6 +143,10 @@
 			</ul>
 		</section>
 
+		<script type="text/javascript">
+			document.body.className = '';	// remove no-js tag
+		</script>
+
 		<!-- Piwik -->
 		<script type="text/javascript">
 			var _paq = _paq || [];
@@ -172,6 +175,19 @@
 			);
 
 			_paq.push(['trackVisibleContentImpressions', false, 1000]);
+
+			Array.prototype.forEach.call(
+				document.querySelectorAll('.todo'),
+				function(placeholder) {
+					placeholder.onclick = function() {
+						_paq.push(['trackGoal', 'Clicked ' + placeholder.id]);
+						placeholder.className = placeholder.className + ' active';
+						placeholder.addEventListener('mouseout', function() {
+							placeholder.className = placeholder.className.replace('active', '');
+						});
+					}
+				}
+			);
 		</script>
 
 	</body>
