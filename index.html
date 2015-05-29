@@ -39,7 +39,7 @@
 				font-size: 80%;
 			}
 
-			#blocks article {
+			.blocks article {
 				width: 15em;
 				display: inline-block;
 				background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 				text-align: center;
 			}
 
-			#blocks article img {
+			.blocks article img {
 				width: 10em;
 			}
 
@@ -109,29 +109,58 @@
 			<p class="smallprint">Le prochain OpenLab aura lieu le <strong>mardi 9 juin 2015 de 15h à 17h</strong>.</p>
 		</section>
 
-		<section id="blocks">
+		<section class="blocks">
+			<h2>Réutilisations</h2>
+
+			<article class="alpha">
+				<a href="http://sgmap.github.io/cout-embauche/">
+					<img src="img/simulateur.png" alt=""/>
+					<h3>Estimateur de coût d'embauche</h3>
+				</a>
+			</article>
+
+			<article class="alpha">
+				<a href="http://apicarto.coremaps.com/paie-carto/">
+					<img src="img/carto.png" alt=""/>
+					<h3>Explorateur d'exonérations géographique</h3>
+				</a>
+			</article>
+
+			<article>
+				<a href="mailto:embauche@sgmap.fr?subject=Proposition de réutilisiation">
+					<img src="img/question_mark.svg" alt="" title="CC-BY José Campos from the Noun Project"/>
+					<h3>Votre produit&nbsp;??<br/>
+						Contactez-nous&nbsp;!</h3>
+				</a>
+			</article>
+		</section>
+
+
+		<section class="blocks">
+			<h2>API de calcul du coût d'embauche</h2>
+
 			<article id="source">
 				<a href="https://github.com/sgmap/paie-api">
 					<img src="img/code.svg" alt=""/>
-					<h3>Modifier le code source</h3>
+					<h3>Code source</h3>
 				</a>
 			</article>
 			<article id="api" class="alpha">
 				<a href="/api/doc">
 					<img src="img/api.svg" alt=""/>
-					<h3>Tester l'API</h3>
+					<h3>Documentation interactive</h3>
 				</a>
 			</article>
-			<article id="fillon" class="alpha">
-				<a href="http://sgmap.github.io/cout-embauche/">
+			<article class="alpha">
+				<a href="https://github.com/sgmap/cout-embauche/">
 					<img src="img/calculator.svg" alt=""/>
-					<h3>Estimer un coût d'embauche</h3>
+					<h3>Interface graphique intégrable</h3>
 				</a>
 			</article>
 			<article id="checklist" class="alpha">
 				<a href="http://embauche.sgmap.fr/tests">
 					<img src="img/checklist.svg" alt="" title="CC-BY Arthur Shlain from the Noun Project"/>
-					<h3>Vérifier les résultats</h3>
+					<h3>Tests des calculs</h3>
 				</a>
 			</article>
 		</section>
