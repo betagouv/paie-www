@@ -3,101 +3,14 @@
 	<head>
 		<meta charset="utf-8"/>
 
-		<title>Simulateur d'embauche</title>
+		<title>Simulateur de coût d'embauche</title>
 
 		<link rel="stylesheet" href="css/awesome.css" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
 
-		<style type="text/css">
-			body {
-				font-family: Helvetica Neue;
-				font-weight: light;
-				max-width: 62em;
-				margin: auto;
-				margin-top: 2em;
-
-				background: linear-gradient(rgba(0,0,200,0.1),rgba(255,255,255,0));
-			}
-
-			section {
-				display: block;
-				clear: both;
-				margin-bottom: 3em;
-			}
-
-			h2 {
-				text-align: center;
-			}
-
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
-			ul {
-				padding: 0;
-				line-height: 1.5;
-			}
-
-			.smallprint {
-				font-size: 80%;
-			}
-
-			.blocks article {
-				width: 15em;
-				display: inline-block;
-				background-repeat: no-repeat;
-				background-size: contain;
-				text-align: center;
-			}
-
-			.blocks article img {
-				width: 10em;
-			}
-
-			.todo {
-				position: relative;
-			}
-
-			.no-js.todo:hover::after, .todo.active::after {
-				content: 'En phase de découverte';
-				color: white;
-				font-weight: bold;
-				padding-top: 40%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 60%;
-				opacity: 1;
-				background-color: rgba(0, 0, 0, 0.6);
-			}
-
-			h3 {
-				font-size: 100%;
-			}
-
-			img {
-				border: none;
-			}
-
-			#logo {
-				float: left;
-				height: 12em;
-				margin-right: 1em;
-			}
-
-			#join {
-				text-align: center;
-			}
-
-			#join a {
-				padding: .5em 1em;
-				font-size: 150%;
-			}
-		</style>
 	</head>
 
-	<body class="no-js">
+	<body>
 		<section id="mission">
 			<img id="logo" src="img/logo_startup_etat.svg" alt=""/>
 
@@ -176,10 +89,6 @@
 			</article>
 		</section>
 
-		<script type="text/javascript">
-			document.body.className = '';	// remove no-js tag
-		</script>
-
 		<!-- Piwik -->
 		<script type="text/javascript">
 			var _paq = _paq || [];
@@ -208,19 +117,6 @@
 			);
 
 			_paq.push(['trackVisibleContentImpressions', false, 1000]);
-
-			Array.prototype.forEach.call(
-				document.querySelectorAll('.todo'),
-				function(placeholder) {
-					placeholder.onclick = function() {
-						_paq.push(['trackGoal', 'Clicked ' + placeholder.id]);
-						placeholder.className = placeholder.className + ' active';
-						placeholder.addEventListener('mouseout', function() {
-							placeholder.className = placeholder.className.replace('active', '');
-						});
-					}
-				}
-			);
 		</script>
 
 	</body>
