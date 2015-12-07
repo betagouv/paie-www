@@ -158,6 +158,7 @@ nav li:first-child {
 
 section {
   color: rgba(0,0,0,0.6);
+  padding: 2em;
 }
 
 
@@ -172,13 +173,18 @@ section {
 }
 
 section h1 {
-  margin: 2em 0 1em;
+  margin: 0.2em 0 1em;
   font-size: 135%;
   color: #3C4963;
 }
 
 section em {
   font-weight: 600;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
 }
 
 a.button {
@@ -189,8 +195,47 @@ a.button {
   background: #3C4963;
   font-weight: 400;
   font-size: 120%;
-  text-decoration: none;
 }
 a.button:hover {
-  background: #415275;
+  background: #4C5C7D;
+}
+
+section.dark {
+  background: #f8f8f8;
+  border-top: 1px solid rgba(0,0,0,0.10);
+  border-bottom: 1px solid rgba(0,0,0,0.10)
+}
+
+section#integration p {
+  width: 30em;
+  margin-top: 3em;
+  vertical-align: top;
+  position: relative;
+}
+section#integration code {
+  position: relative;
+  display: inline-block;
+  font-size: 80%;
+  width: 40em;
+  padding: 1em 0em;
+  background: white;
+  margin: auto;
+  margin-left: 3em;
+
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05), -1px 1px 1px rgba(0,0,0,0.02);
+}
+
+section#integration code em {
+  font-weight: 300;
+  color: black;
+}
+
+section#integration code:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #e8e8e8 #f8f8f8;
 }
