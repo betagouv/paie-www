@@ -1,7 +1,7 @@
 body {
-  font-family: 'Fira Sans';
-  font-weight: 300;
-
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   margin: 0
 }
 
@@ -23,7 +23,7 @@ body {
   width: 9em;
   border: 1px solid white;
   text-transform: uppercase;
-  padding: 0.4em 0.5em 0.1em 0.5em;
+  padding: 0.4em 1em 0.4em 0.5em;
   opacity: 0.6
 }
 
@@ -31,9 +31,10 @@ body {
   line-height: 3em;
   vertical-align: top;
   margin-left: 0.5em;
+  font-weight: 300;
 }
 #project .heavy{
-  font-weight: bold
+  font-weight: 600
 }
 
 nav ul {
@@ -77,6 +78,12 @@ nav li:first-child {
   background: -o-linear-gradient(top,#3C4963 10%,#3C3C63 80%);
   background: -ms-linear-gradient(top,#3C4963 10%,#3C3C63 80%);
   background: linear-gradient(to bottom,#3C4963 10%,#3C3C63 80%);
+
+  /* Get fancy or not ?
+  -webkit-box-shadow: 2px 8px 21px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 8px 21px -11px rgba(0,0,0,0.75);
+  box-shadow: 2px 8px 21px -11px rgba(0,0,0,0.75);
+  */
 }
 
 #showcase {
@@ -108,12 +115,13 @@ nav li:first-child {
   display: inline-block;
   width: 20%;
   height: 100%;
-  font-size: 280%;
-  font-weight: 500;
-  line-height: 1.3em;
+  font-size: 250%;
+  font-weight: 600;
+  line-height: 1.2em;
   vertical-align: top;
   margin: 1em 0 0 1em;
   text-transform: uppercase;
+  text-align: left;
 
   text-shadow: 2px 2px 5px rgba(6, 6, 6, 0.3);
 }
@@ -146,5 +154,29 @@ nav li:first-child {
   border-radius: 50%;
   padding: 0 0.2em 0 0.35em
   */
+}
 
+section {
+  color: rgba(0,0,0,0.6);
+}
+
+
+section p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+}
+
+section {
+  text-align: center;
+}
+
+section h1 {
+  margin: 2em 0 1em;
+  font-size: 135%;
+  color: #3C4963;
+}
+
+section em {
+  font-weight: 600;
 }
