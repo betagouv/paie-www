@@ -222,7 +222,8 @@ section em {
   font-style: normal;
 }
 
-a {
+section a {
+  color: black;
   text-decoration: none;
 }
 
@@ -259,7 +260,7 @@ section#integration code {
   padding: 1em 0em;
   background: white;
   margin: auto;
-  margin-left: 3em;
+  margin-bottom: 1em;
 
   box-shadow: 0 1px 1px rgba(0,0,0,0.05), -1px 1px 1px rgba(0,0,0,0.02);
 }
