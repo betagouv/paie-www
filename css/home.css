@@ -20,18 +20,20 @@ body {
   display: inline-block;
   font-size: 35%;
   font-weight: 400;
-  width: 9em;
+  width: 9.5em;
   border: 1px solid white;
   text-transform: uppercase;
-  padding: 0.4em 1em 0.4em 0.5em;
-  opacity: 0.6
+  padding: .4em .4em .4em .5em;
+  opacity: .6;
 }
 
 #project .name {
-  line-height: 2.7em;
+  display: inline-block;
+  line-height: 1.3em;
   vertical-align: top;
   margin-left: 0.5em;
   font-weight: 300;
+  width: 6em;
 }
 #project .heavy{
   font-weight: 600
