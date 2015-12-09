@@ -28,7 +28,7 @@ body {
 }
 
 #project .name {
-  line-height: 3em;
+  line-height: 1.5em;
   vertical-align: top;
   margin-left: 0.5em;
   font-weight: 300;
@@ -39,10 +39,11 @@ body {
 
 nav ul {
   position: absolute;
-  top: 3%;
-  right: 10%;
+  top: 2%;
+  right: 6%;
   margin: 0;
   line-height: 3em;
+  font-weight: 400;
 }
 
 nav a {
@@ -58,7 +59,6 @@ nav li {
 
 nav li a {
   font-size: 90%;
-  font-weight: 500;
   opacity: 0.8
 }
 
@@ -68,6 +68,12 @@ nav li a:hover {
 
 nav li:first-child {
   left: 10%
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
 }
 
 #splash {
@@ -113,17 +119,47 @@ nav li:first-child {
 
 #showcase h1 {
   display: inline-block;
-  width: 20%;
-  height: 100%;
+  width: 25%;
   font-size: 250%;
   font-weight: 600;
-  line-height: 1.2em;
+  line-height: 1.3em;
   vertical-align: top;
-  margin: 1em 0 0 1em;
   text-transform: uppercase;
   text-align: left;
 
   text-shadow: 2px 2px 5px rgba(6, 6, 6, 0.3);
+  float: right;
+}
+
+@media (max-width: 1366px) {
+  #showcase h1 {
+    line-height: 1.2
+  }
+}
+
+@media (max-width: 1280px) {
+  #showcase h1 {
+    font-size: 215%;
+    margin: .5em 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  #splash {
+    padding-top: 8em;
+  }
+  #showcase {
+    width: 80%;
+  }
+  #showcase h1 {
+    font-size: 210%;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  #image-wrap {
+    width: 95%;
+  }
 }
 
 #image-wrap {
@@ -159,8 +195,8 @@ nav li:first-child {
 section {
   color: rgba(0,0,0,0.6);
   padding: 2em;
+  text-align: center;
 }
-
 
 section p {
   margin-left: auto;
@@ -168,8 +204,11 @@ section p {
   width: 50em;
 }
 
-section {
-  text-align: center;
+@media (max-width: 1024px) {
+  section p,
+  section code {
+    max-width: 90%;
+  }
 }
 
 section h1 {
