@@ -28,7 +28,7 @@ body {
 }
 
 #project .name {
-  line-height: 1.5em;
+  line-height: 2.7em;
   vertical-align: top;
   margin-left: 0.5em;
   font-weight: 300;
@@ -39,7 +39,7 @@ body {
 
 nav ul {
   position: absolute;
-  top: 2%;
+  top: 5%;
   right: 6%;
   margin: 0;
   line-height: 3em;
