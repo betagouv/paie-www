@@ -62,6 +62,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a#integrate {
+  font-weight: 600;
+}
+
 nav li {
   list-style: none;
   display: inline;
@@ -70,7 +74,7 @@ nav li {
 
 nav li a {
   font-size: 90%;
-  opacity: 0.8
+  opacity: 0.85
 }
 
 nav li a:hover {
