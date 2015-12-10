@@ -24,7 +24,7 @@ body {
   border: 1px solid white;
   text-transform: uppercase;
   padding: .4em .4em .4em .5em;
-  opacity: .6;
+  opacity: .85;
 }
 
 #project .name {
