@@ -5,6 +5,10 @@ body {
   margin: 0
 }
 
+.narrow-screen {
+  display: none;
+}
+
 #project {
   color: white;
   position: absolute;
@@ -67,12 +71,6 @@ nav li a:hover {
 
 nav li:first-child {
   left: 10%
-}
-
-@media (max-width: 800px) {
-  nav ul {
-    display: none;
-  }
 }
 
 #splash {
@@ -158,6 +156,48 @@ nav li:first-child {
   }
   #image-wrap {
     width: 95%;
+  }
+}
+
+
+/* Narrow and mobile screens */
+@media (max-width: 800px) {
+  .wide-screen {
+    display: none;
+  }
+  .narrow-screen {
+    display: block;
+  }
+
+  #project {
+    transform: scale(.75);
+    transform-origin: left;
+  }
+
+  nav li {
+    display: block;
+  }
+
+  nav ul {
+    display: block;
+    line-height: 1.5em;
+    text-align: right;
+  }
+
+  #splash {
+    padding: 9em 0 5em;
+  }
+
+  #showcase {
+    width: 90%;
+  }
+
+  #showcase h1 {
+    font-size: 180%;
+  }
+  #image-wrap {
+    width: 100%;
+    padding: 0;
   }
 }
 
