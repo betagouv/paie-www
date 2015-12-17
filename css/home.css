@@ -5,6 +5,18 @@ body {
   margin: 0
 }
 
+/* Viewport explained here :
+http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972?ec_unit=translation-info-language
+*/
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
 .narrow-screen {
   display: none;
 }
