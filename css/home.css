@@ -160,7 +160,7 @@ nav li:first-child {
 }
 
 
-/* Narrow and mobile screens */
+/* Narrow screens */
 @media (max-width: 800px) {
   .wide-screen {
     display: none;
@@ -198,6 +198,14 @@ nav li:first-child {
   #image-wrap {
     width: 100%;
     padding: 0;
+  }
+}
+
+
+/* Mobile screens */
+@media (max-width: 400px) {
+  #project .name {
+    display: none;
   }
 }
 
