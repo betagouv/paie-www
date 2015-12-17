@@ -277,7 +277,7 @@ section a {
 a.button {
   display: inline-block;
   margin: 1.2em 0 0;
-  padding: .5em 5em;
+  padding: .5em 5%;
   color: white;
   background: #3C4963;
   font-weight: 400;
@@ -349,7 +349,8 @@ section.dark a {
 
 section.blocks article {
   vertical-align: top;
-  width: 15em;
+  max-width: 15em;
+  padding: 0 2%;
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
