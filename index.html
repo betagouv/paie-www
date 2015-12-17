@@ -161,18 +161,5 @@
 		</script>
 		<noscript><p><img src="//stats.data.gouv.fr/piwik.php?idsite=10" style="border:0;" alt="" /></p></noscript>
 		<!-- End Piwik Code -->
-
-		<script>
-			Array.prototype.forEach.call(
-				document.querySelectorAll('section'),
-				function(section) {
-					section.setAttribute('data-track-content', 'true');
-					section.setAttribute('data-content-name', section.id);
-				}
-			);
-
-			_paq.push(['trackVisibleContentImpressions', false, 1000]);
-		</script>
-
 	</body>
 </html>
