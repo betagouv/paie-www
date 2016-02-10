@@ -50,7 +50,7 @@ http://webdesign.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-t
 
 nav ul {
   position: absolute;
-  top: 5%;
+  top: 4%;
   right: 6%;
   margin: 0;
   line-height: 3em;
@@ -62,18 +62,14 @@ nav a {
   text-decoration: none;
 }
 
-nav a#integrate {
-  font-weight: 600;
-}
-
 nav li {
   list-style: none;
   display: inline;
-  padding-left: 2em
+  padding-left: 1.2em
 }
 
 nav li a {
-  font-size: 90%;
+  font-size: 75%;
   opacity: 0.85
 }
 
@@ -153,7 +149,30 @@ nav li:first-child {
   }
 }
 
+#main-actions {
+  margin: 2em auto;
+  width: 70%;
+}
+
+#main-actions a {
+  font-size: 85%;
+  padding: .2em 1em;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1em;
+  text-decoration: none;
+  font-weight: 300;
+  transition: .3s;
+}
+
+#main-actions a:hover {
+  background: #444469;
+}
+
 @media (max-width: 1024px) {
+  #main-actions {
+    text-align: center;
+  }
   #splash {
     padding-top: 8em;
   }
