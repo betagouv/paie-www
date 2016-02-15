@@ -1,24 +1,24 @@
 API cotisations sociales
 ===================
 
-[OpenFisca](http://www.openfisca.fr/) est un projet libre de simulation du système socio-fiscal français. C'est un projet *libre*,  aujourd'hui développé principalement par [Etalab](http://etalab.gouv.fr/), l'[IPP](http://ipp.eu/) et le l'[incubateur](http://sgmap.github.io/) de services numériques de l’État.
+[OpenFisca](http://www.openfisca.fr/) est un logiciel de simulation du système socio-fiscal français. C'est un projet *libre*,  aujourd'hui développé principalement par [Etalab](http://etalab.gouv.fr/), l'[IPP](http://ipp.eu/) et le l'[incubateur](http://sgmap.github.io/) de services numériques de l’État.
 
-Particulièrement, le moteur nous permet de calculer les cotisations sociales (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
+Particulièrement, le moteur permet de calculer les cotisations sociales (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
 
-OpenFisca est un logiciel développé en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des cotisations sociales, un point d'entrée simplifié, nommé `formula` a été créé**, nous allons l'expliciter ici. Cette documentation est un complément à la [documentation principale](http://doc.openfisca.fr/) d'OpenFisca.
-
-
-> A savoir : un des éléments les plus importants d'OpenFisca est la *variable*. Certaines sont des variables d'entrée (nous fournissons une valeur au moteur de calcul), d'autres des variables de sortie (elles sont calculées et renvoyées).
+OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des cotisations sociales, un point d'entrée simplifié, nommé `formula` a été créé**, nous allons l'expliciter ici. Cette documentation est un complément à la [documentation principale](http://doc.openfisca.fr/) d'OpenFisca.
 
 
 ## Les instances utilisables
 
 L'instance principale et officielle est `api.openfisca.fr`.
-L'instance utilisée et gérée par l'équipe du [simulateur](http://sgmap.github.io/cout-embauche/) de coût d'embauche est `openfisca-embauche.sgmap.fr`.
+L'instance utilisée et gérée par l'équipe du [simulateur](http://sgmap.github.io/cout-embauche/) de coût d'embauche est **`openfisca-embauche.sgmap.fr`**.
 
-Cette dernière est privilégiée pour ce projet car elle nous permet de proposer des nouveautés toujours en attente de validation dans la branche principale (car elles peuvent très bien marcher pour nous, mais poser problème pour les autres).
+Cette dernière est privilégiée pour ce projet car elle nous permet de proposer des nouveautés toujours en attente de validation dans la branche principale (qui peuvent peuvent très bien marcher pour nous, mais impacter d'autres parties du moteur).
 
 ## Le point d'entrée principal
+
+> A savoir : un des éléments les plus importants d'OpenFisca est la *variable*. Certaines sont des variables d'entrée (nous fournissons une valeur au moteur de calcul), d'autres des variables de sortie (elles sont calculées et renvoyées).
+
 
 **Le point d'entrée qui nous concerne est très simple :**
 
@@ -26,14 +26,14 @@ Cette dernière est privilégiée pour ce projet car elle nous permet de propose
 
 
 - DATE : la date de la simulation, sous la forme `YYYY-MM`
-- VARIABLES-DE-SORTIE : une liste d'identifiants de variables que nous voulons recevoir en retour.
+- VARIABLES-DE-SORTIE : une liste d'identifiants de variables que nous voulons recevoir en retour séparées par +.
 - VALEURS-D’ENTRÉE :  une liste de couples `variable=valeur` séparés par &.
 
-
+> Toutes les variables d'OpenFisca sont listées sur le très utile site d'exploration http://legislation.openfisca.fr/variables
 
 #### Exemples :
 
-Pour obtenir la valeur du plafond de la sécurité sociale (une variable de sortie) :
+Pour obtenir la valeur du plafond de la sécurité sociale (un exemple de variable) :
 
 **`GET`** `/api/2/formula/2015-11/plafond_securite_sociale`
 
@@ -51,7 +51,7 @@ Pour obtenir les deux :
 
 [essayer](https://openfisca-embauche.sgmap.fr/api/2/formula/2015-11/plafond_securite_sociale+smic_proratise)
 
-Ces exemples ne sollicitent aucun calcul du moteur : ces variables proviennent directement des `paramètres`, qui sont un peu comme une base de donnée des chiffres de la loi. Et en effet, nous n'avons pas renseigné de valeurs d'entrée.
+Ces exemples ne sollicitent aucun calcul du moteur : ces variables proviennent directement des `paramètres`, qui sont un peu comme une base de donnée des chiffres de la loi. Et en effet, nous n'avons pas renseigné de valeur d'entrée.
 
 Voici un exemple plus complet :
 
@@ -75,7 +75,12 @@ Un dernier exemple, qui constitue une **simulation presque complète** des cotis
 
 ## Les périodes
 
-Pourquoi pas l'année ?
-La problématique des allègements calculés sur l'année (lien vers le wiki)
+OpenFisca est prévu pour faire des calculs sur la période de l'année ou du mois. **Le point d'entrée `/formula` se concentre lui exclusivement sur le mois** (ce qui correspond aux besoins actuels du simulateur de coût d'embauche). Le méchanisme est simple : nous simulons la situation d'un salarié à salaire constant.
 
-----------
+Certaines variables *doivent* être calculées à l'année, particulièrement les éxonérations applicables à des salaires inférieurs à une limite annuelle, par exemple allègement général sur les bas salaires ou l'allègement sur la cotisation d'allocations familiales. Pour demander leur calcul mensuel au moyen de ce point d'entrée, des paramètres supplémentaires sont à fournir : voir cette [note](https://github.com/sgmap/cout-embauche/wiki/Note-sur-le-calcul-des-all%C3%A8gements-%28Fillon-g%C3%A9n%C3%A9ral-et-allocations-familiales%29).
+
+Pour l'instant, **le calcul des cotisations sociales n'est pas géré sur l'année**.
+
+## Intégrer des extensions / réformes
+
+Il est possible de modifier les variables et paramètres d'OpenFisca de façon modulaire grâce aux extensions. Il sera bientôt possible d'utiliser les extensions dans le point d'entrée `/formula`
