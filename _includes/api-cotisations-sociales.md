@@ -5,8 +5,13 @@ API cotisations sociales
 
 Particulièrement, le moteur permet de calculer les cotisations sociales (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
 
-OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des cotisations sociales, un point d'entrée simplifié, nommé `formula` a été créé**, nous allons l'expliciter ici. Cette documentation est un complément à la [documentation principale](http://doc.openfisca.fr/) d'OpenFisca.
+OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des cotisations sociales, un point d'entrée simplifié, nommé `formula` a été créé** : il constitue l'API "cotisations sociales" et nous allons l'expliciter ici.
 
+**Pour aller plus loin** dans la connaissance de cette API `/formula`, aidez-vous de ces ressources essentielles :
+
+- la [description complète et intéractive](http://embauche.sgmap.fr/api/doc) de l'API cotisations sociales.
+- la [documentation générale](http://doc.openfisca.fr/) d'OpenFisca (couvrant notamment le lancement d'une instance du moteur).
+- [legislation.openfisca.fr](http://legislation.openfisca.fr/) pour explorer les règles et les paramètres d'OpenFisca.
 
 ## Les instances utilisables
 
