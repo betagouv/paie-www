@@ -1,7 +1,7 @@
 API cotisations sociales
 ===================
 
-[OpenFisca](http://www.openfisca.fr/) est un logiciel de simulation du système socio-fiscal français. C'est un projet *libre*,  aujourd'hui développé principalement par [Etalab](http://etalab.gouv.fr/), l'[IPP](http://ipp.eu/) et le l'[incubateur](https://beta.gouv.fr)/ de services numériques de l’État.
+[OpenFisca](http://www.openfisca.fr/) est un logiciel de simulation du système socio-fiscal français. C'est un projet *libre*,  aujourd'hui développé principalement par [Etalab](http://etalab.gouv.fr/), l'[IPP](http://ipp.eu/) et le l'[incubateur](https://beta.gouv.fr) de services numériques de l’État.
 
 Particulièrement, le moteur permet de calculer les cotisations sociales (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
 
