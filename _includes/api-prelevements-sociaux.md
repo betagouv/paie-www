@@ -1,15 +1,15 @@
-API cotisations sociales
+API prélèvements sociaux
 ===================
 
 [OpenFisca](http://www.openfisca.fr/) est un logiciel de simulation du système socio-fiscal français. C'est un projet *libre*,  aujourd'hui développé principalement par [Etalab](http://etalab.gouv.fr/), l'[IPP](http://ipp.eu/) et le l'[incubateur](https://beta.gouv.fr) de services numériques de l’État.
 
-Particulièrement, le moteur permet de calculer les cotisations sociales (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
+Particulièrement, le moteur permet de calculer les prélèvements sociaux sur les revenus d'activité (et les aides qui les réduisent) qui doivent être aujourd'hui payées par un employeur quand il verse un salaire. C'est à quelques différences près (dans les deux sens) ce qui constitue la fiche de paie.
 
-OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des cotisations sociales, un point d'entrée simplifié, nommé `formula` a été créé** : il constitue l'API "cotisations sociales" et nous allons l'expliciter ici.
+OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage%29), mais surtout **rendu accessible directement sous la forme d'une API** complète couvrant toute la complexité des simulations possibles. **Pour le calcul des prélèvements sociaux, un point d'entrée simplifié, nommé `formula` a été créé** : il constitue l'API "prélèvements sociaux" et nous allons l'expliciter ici.
 
 **Pour aller plus loin** dans la connaissance de cette API `/formula`, aidez-vous de ces ressources essentielles :
 
-- la [description complète et intéractive](http://embauche.beta.gouv.fr/api/doc) de l'API cotisations sociales.
+- la [description complète et intéractive](http://embauche.beta.gouv.fr/api/doc) de l'API prélèvements sociaux.
 - la [documentation générale](http://doc.openfisca.fr/) d'OpenFisca (couvrant notamment le lancement d'une instance du moteur).
 - [legislation.openfisca.fr](http://legislation.openfisca.fr/) pour explorer les règles et les paramètres d'OpenFisca.
 
@@ -70,7 +70,7 @@ Nous avons demandé le calcul des deux cotisations de vieillesse plafonnée, pou
 
 > La vieillesse plafonnée est une cotisation que nous payons tous,  calculée sur la base du plafond de la sécurité sociale (notre premier exemple), et non sur l'ensemble du salaire : voila un exemple de `règle` de calcul interne à OpenFisca. Elles est complétée par la vieillesse déplafonnée.
 
-Un dernier exemple, qui constitue une **simulation presque complète** des cotisations sociales et aides d'un salarié rémunéré au salaire médian :
+Un dernier exemple, qui constitue une **simulation presque complète** des prélèvements sociaux et aides d'un salarié rémunéré au salaire médian :
 
 [Exemple complet](https://embauche.beta.gouv.fr/openfisca/api/2/formula/accident_du_travail+famille+fnal+versement_transport+agff_salarie+agirc_salarie+agirc_gmp_salarie+apec_salarie+arrco_salarie+chomage_salarie+cotisation_exceptionnelle_temporaire_salarie+vieillesse_plafonnee_salarie+vieillesse_deplafonnee_salarie+mmid_salarie+csg_deductible_salaire+csg_imposable_salaire+crds_salaire+salaire_net_a_payer+salaire_super_brut+ags+agff_employeur+apec_employeur+arrco_employeur+chomage_employeur+cotisation_exceptionnelle_temporaire_employeur+vieillesse_deplafonnee_employeur+vieillesse_plafonnee_employeur+mmid_employeur+contribution_supplementaire_apprentissage+contribution_solidarite_autonomie+formation_professionnelle+participation_effort_construction+taxe_apprentissage+taxe_salaires+agirc_employeur+agirc_gmp_employeur+allegement_fillon+allegement_cotisation_allocations_familiales+exoneration_cotisations_employeur_apprenti+exoneration_cotisations_employeur_stagiaire+exoneration_cotisations_employeur_jei+credit_impot_competitivite_emploi+financement_organisations_syndicales+prevoyance_obligatoire_cadre+cout_du_travail+aide_premier_salarie+smic_proratise?effectif_entreprise=1&type_sal=prive_non_cadre&salaire_de_base=2300&code_postal_entreprise=&depcom_entreprise=&allegement_fillon_mode_recouvrement=anticipe_regularisation_fin_de_periode&allegement_cotisation_allocations_familiales_mode_recouvrement=anticipe_regularisation_fin_de_periode&jeune_entreprise_innovante=false&contrat_de_travail_debut=2016-2)
 
@@ -84,7 +84,7 @@ OpenFisca est prévu pour faire des calculs sur la période de l'année ou du mo
 
 Certaines variables *doivent* être calculées à l'année, particulièrement les éxonérations applicables à des salaires inférieurs à une limite annuelle, par exemple allègement général sur les bas salaires ou l'allègement sur la cotisation d'allocations familiales. Pour demander leur calcul mensuel au moyen de ce point d'entrée, des paramètres supplémentaires sont à fournir : voir cette [note](https://github.com/sgmap/cout-embauche/wiki/Note-sur-le-calcul-des-all%C3%A8gements-%28Fillon-g%C3%A9n%C3%A9ral-et-allocations-familiales%29).
 
-Pour l'instant, **le calcul des cotisations sociales n'est pas géré sur l'année**.
+Pour l'instant, **le calcul des prélèvements n'est pas géré sur l'année**.
 
 ## Intégrer des extensions / réformes
 
