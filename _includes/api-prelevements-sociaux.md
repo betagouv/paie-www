@@ -9,7 +9,6 @@ OpenFisca est écrit en [Python](https://fr.wikipedia.org/wiki/Python_%28langage
 
 **Pour aller plus loin** dans la connaissance de cette API `/formula`, aidez-vous de ces ressources essentielles :
 
-- la [description complète et intéractive](http://embauche.beta.gouv.fr/api/doc) de l'API prélèvements sociaux.
 - la [documentation générale](http://doc.openfisca.fr/) d'OpenFisca (couvrant notamment le lancement d'une instance du moteur).
 - [legislation.openfisca.fr](http://legislation.openfisca.fr/) pour explorer les règles et les paramètres d'OpenFisca.
 
