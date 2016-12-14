@@ -152,21 +152,24 @@ nav li:first-child {
 #main-actions {
   margin: 2em auto;
   width: 70%;
+  line-height: 3em;
 }
 
 #main-actions a {
-  font-size: 85%;
+  font-size: 160%;
   padding: .2em 1em;
-  color: white;
+
   border: 1px solid white;
   border-radius: 1em;
   text-decoration: none;
   font-weight: 300;
   transition: .3s;
+  color: white;
 }
 
 #main-actions a:hover {
-  background: #444469;
+  background: white;
+  color: #3C4963;
 }
 
 @media (max-width: 1024px) {
@@ -301,8 +304,7 @@ section em {
 }
 
 section a {
-  color: black;
-  text-decoration: none;
+  color: #3C4963
 }
 
 a.button {
@@ -325,7 +327,7 @@ section.light {
 }
 
 section#integration p {
-  width: 30em;
+  width: 40em;
   margin-top: 3em;
   vertical-align: top;
   position: relative;
@@ -356,6 +358,10 @@ section#integration code:before {
   border-width: 0 16px 16px 0;
   border-style: solid;
   border-color: #e8e8e8 #f8f8f8;
+}
+
+section#integrations a {
+  text-decoration: none;
 }
 
 

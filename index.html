@@ -4,7 +4,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="initial-scale=1">
 
-		<title>Simulateur de coût d'embauche</title>
+		<title>Simulateur d'embauche</title>
 
 		<link rel="stylesheet" href="css/home.css" type="text/css"/>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>	</head>
@@ -14,12 +14,12 @@
 			<div id="project">
 				<img src="./img/logo-SGMAP-fond-blanc.svg" alt="Secrétariat général pour la modernisation de l'action publique">
 				<a href="" class="name">
-					<span class="heavy">Coût </span>du&nbsp;<span class="heavy">Travail</span>
+					<span class="heavy">Prix </span>du&nbsp;<span class="heavy">Travail</span>
 				</a>
 			</div>
 		  <ul>
 				<li><a href="#about">À propos</a></li>
-				<li><a href="http://sgmap.github.io/cout-embauche/" target="_blank"><strong>Démonstration</strong></a></li>
+				<li><a href="https://embauche.beta.gouv.fr/simulateur" target="_blank"><strong>Démonstration</strong></a></li>
 				<li><a id="integrate" href="#integration">
 					<strong>
 						<span class="wide-screen">Intégrez le module</span>
@@ -31,7 +31,7 @@
 		</nav>
 		<div id="splash">
 			<div id="showcase">
-				<h1>Estimer le&nbsp;coût d'embauche en&nbsp;France</h1>
+				<h1>Estimer le&nbsp;prix<br/>d'une&nbsp;embauche en&nbsp;France</h1>
 				<div id="image-wrap">
 					<img src="img/simulateur.gif" alt="Vue animée du simulateur" class="animated">
 					<span id="play-button">&#9654;</span>
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div id="main-actions">
-				<a href="http://sgmap.github.io/cout-embauche/" target="_blank">Testez le simulateur &nbsp; &#10142;</a>
+				<a href="https://embauche.beta.gouv.fr/simulateur" target="_blank">Faire une simulation &nbsp; &#10142;</a>
 			</div>
 		</div>
 
@@ -50,27 +50,28 @@
 				L'incubateur des services numériques du Gouvernement a lancé, le 1ᵉʳ octobre 2014, le développement en mode Startup d’État d’une ressource ouverte de calcul des prélèvements sociaux sur les revenus d'activité en France.
 			</p>
 			<p>
-				Le premier produit, un <em>module d'estimation du coût d'une embauche</em>, peut être <em>intégré facilement et gratuitement</em> par toute organisation sur son site Web. Ce module repose sur le moteur de calcul OpenFisca.
+				Le premier produit, un <em>module d'estimation du prix d'une embauche</em>, peut être <em>intégré facilement et gratuitement</em> par toute organisation sur son site Web. Ce module repose sur le moteur de calcul OpenFisca.
 			</p>
 			<p>
 				Nous encourageons toutes les initiatives d'information sur le coût du travail&nbsp;: ses contreparties, la fiche de paie, les spécificités du droit conventionnel...
 			</p>
 			<a class="button" href="mailto:contact@embauche.beta.gouv.fr?subject=Rejoindre l'OpenLab&body=Bonjour, je suis intéressé par votre produit et votre démarche et souhaite participer au prochain OpenLab. Bonne journée !">Participez à l'évolution du produit</a>
-			<p>Notre prochaine rencontre OpenLab aura lieu <strong>le jeudi 23 juin 2016 à 14h à la DGEFP à Paris</strong>, 10-18 place des cinq martyrs du lycée Buffon.</p>
+			<!-- <p>Notre prochaine rencontre OpenLab aura lieu <strong>le jeudi 23 juin 2016 à 14h à la DGEFP à Paris</strong>, 10-18 place des cinq martyrs du lycée Buffon.</p> -->
 		</section>
 
 
 		<section class="light" id="integration">
 			<h1>Intégrez le module Web</h1>
 			<p>
- 				Ajoutez simplement la ligne suivante à votre page.
+ 				Intégrez le module en ajoutant une ligne à votre page Web :
 			</p>
 			<code>
-				<span><</span><em>script src</em>="https://embauche.beta.gouv.fr/modules/pointe/cout-embauche-widget.js">
+				<span><</span><em>script><br/>
+					id</em>="script-simulateur-embauche" <em>data-couleur</em>="<span style="color:#4A89DC">#4A89DC</span>" <em>src</em>="https://embauche.beta.gouv.fr/modules/v2/dist/simulateur.js">
 				<span><</span><span>/</span><em>script</em><span>></span>
 			</code>
 			<p>
-				<a href="https://github.com/sgmap/cout-embauche#style" target="_blank">Personnalisez</a> le style pour coller à votre charte graphique.
+				Vous pouvez <b>choisir la couleur principale du module</b> pour le fondre dans le thème visuel de votre page : changez simplement la valeur de <i>data-couleur</i> ci-dessus. Pour la choisir, utilisez notre <a href="https://embauche.beta.gouv.fr/modules/v2/couleur.html" target="_blank">outil interactif</a>.
 			</p>
 
 		</section>
@@ -87,9 +88,9 @@
 			<h1>Quelques intégrations</h1>
 
 			<article>
-				<a href="http://sgmap.github.io/cout-embauche/">
+				<a href="https://embauche.beta.gouv.fr/simulateur">
 					<img src="img/simulateur.png" alt=""/>
-					<h2>Démonstrateur</h2>
+					<h2>Notre démonstrateur</h2>
 				</a>
 			</article>
 
@@ -112,6 +113,20 @@
 					<img src="img/aides-creations.png" alt="Aides-Créations.com"/>
 					<h2>Créateur de business plan<br/>
 						Aides-Créations.com</h2>
+				</a>
+			</article>
+
+			<article>
+				<a href="http://travail-emploi.gouv.fr/emploi/accompagnement-des-tpe-pme/tpe-pme/article/le-simulateur-du-cout-d-embauche">
+					<img src="img/min-tra.jpg" alt="Ministère du travail"/>
+					<h2>Ministère du travail</h2>
+				</a>
+			</article>
+
+			<article>
+				<a href="https://entreprise.pole-emploi.fr/cout-salarie/">
+					<img src="img/pole-emploi.png" alt="Pôle Emploi"/>
+					<h2>Pôle Emploi</h2>
 				</a>
 			</article>
 
@@ -141,11 +156,11 @@
 					<p>Permet l'estimation rapide et précise du coût d'une embauche</p>
 				</article>
 				<article id="checklist" class="alpha">
-					<a href="#">
+					<a href="https://github.com/openfisca/openfisca-france/tree/master/openfisca_france/tests/formulas">
 						<img src="img/tests.svg" alt="" />
 						<h2>Tests des calculs</h2>
 					</a>
-					<p>Fiabilisent le calcul des prélèvements (nouvelle version à venir)</p>
+					<p>Fiabilisent le calcul des prélèvements</p>
 				</article>
 				<article id="openfisca" class="alpha">
 					<a href="http://www.openfisca.fr">
